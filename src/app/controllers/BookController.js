@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 
-import Book from '../models/Book';
-import File from '../models/File';
+import Book from '../models/Book.js';
+import File from '../models/File.js';
 
 class BookController {
   async index(request, response) {

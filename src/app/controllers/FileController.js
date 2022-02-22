@@ -1,6 +1,6 @@
-import File from '../models/File';
-
 import imgbbUploader from 'imgbb-uploader';
+
+import File from '../models/File.js';
 
 class FileController {
   async store(request, response) {

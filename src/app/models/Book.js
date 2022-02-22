@@ -1,5 +1,7 @@
-import Sequelize, { Model } from 'sequelize';
+import Sequelize from 'sequelize';
 import { v4 as uuidv4 } from 'uuid';
+
+const { Model } = Sequelize;
 
 class Book extends Model {
   static init(sequelize) {

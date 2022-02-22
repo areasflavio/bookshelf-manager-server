@@ -1,6 +1,8 @@
-import Sequelize, { Model } from 'sequelize';
+import Sequelize from 'sequelize';
 import bcrypt from 'bcryptjs';
 import { v4 as uuidv4 } from 'uuid';
+
+const { Model } = Sequelize;
 
 class User extends Model {
   static init(sequelize) {

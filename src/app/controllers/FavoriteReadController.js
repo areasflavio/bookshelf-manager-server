@@ -1,4 +1,4 @@
-import Book from '../models/Book';
+import Book from '../models/Book.js';
 
 class FavoriteReadController {
   async update(request, response) {

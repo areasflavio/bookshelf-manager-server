@@ -1,4 +1,4 @@
-import Book from '../models/Book';
+import Book from '../models/Book.js';
 
 class ReadingController {
   async update(request, response) {

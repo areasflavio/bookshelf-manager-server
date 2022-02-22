@@ -1,20 +1,24 @@
 import { Router } from 'express';
 import multer from 'multer';
 
-import multerConfig from './config/multer';
+import multerConfig from './config/multer.js';
 
-import authMiddleware from './app/middleware/auth';
+import authMiddleware from './app/middleware/auth.js';
 
 const routes = Router();
 
 const upload = multer(multerConfig);
 
-import SessionController from './app/controllers/SessionController';
-import BookController from './app/controllers/BookController';
-import FileController from './app/controllers/FileController';
-import UserController from './app/controllers/UserController';
-import ReadingController from './app/controllers/ReadingController';
-import FavoriteReadController from './app/controllers/FavoriteReadController';
+import SessionController from './app/controllers/SessionController.js';
+import BookController from './app/controllers/BookController.js';
+import FileController from './app/controllers/FileController.js';
+import UserController from './app/controllers/UserController.js';
+import ReadingController from './app/controllers/ReadingController.js';
+import FavoriteReadController from './app/controllers/FavoriteReadController.js';
+
+routes.get('/', (request, response) => {
+  return response.json({ message: 'This is the Bookshelf Manager server.' });
+});
 
 routes.post('/session', SessionController.store);
 
